@@ -1,16 +1,21 @@
 {
-    "version":2,
-    "builds":[
+    "version": 2,
+    "builds": [
         {
-            "src":"script.js",
-            "use":"@vercel/node"
+            "src": "./script.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "./public/*",
+
+            "use": "@vercel/static"
         }
     ],
-    "routes":[
+    "routes": [
         {
-            "src":"/(.*)",
-            "dest":"script.js"
+            "src": "/(.*)",
+            "dest": "script.js"
         }
-    ]
-  
-  }
+    ],
+    "outputDirectory": "public"
+}
