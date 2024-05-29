@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de XLSX para CSV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Converter XLSX para CSV</h1>
+        <form id="uploadForm">
+            <label for="fileInput">Escolha o arquivo XLSX:</label>
+            <input type="file" id="fileInput" name="xlsxFile" accept=".xlsx" required>
+            <label for="delimiterInput">Delimitador:</label>
+            <input type="text" id="delimiterInput" name="delimiter" value="," required>
+            <button type="submit">Converter e Baixar CSV</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

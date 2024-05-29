@@ -1,0 +1,5 @@
+
+# Outros arquivos/pastas que você deseja ignorar
+node_modules
+coverage
+.cache
