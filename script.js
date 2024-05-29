@@ -51,6 +51,7 @@ app.post('/upload', (req, res) => {
         try {
             convertXlsxToCsv(inputFilePath, outputFilePath, delimiter);
             res.download(outputFilePath, (err) => {
+                console.log(err)
                 if (err) {
                     return res.status(500).send(err);
                 }
@@ -60,6 +61,7 @@ app.post('/upload', (req, res) => {
                 fs.unlinkSync(outputFilePath);
             });
         } catch (err) {
+            console.log(err)
             res.status(500).send('Erro ao converter o arquivo.');
         }
     });
