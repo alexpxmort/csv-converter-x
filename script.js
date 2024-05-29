@@ -10,7 +10,7 @@ const port = process.env.PORT || 7000;
 
 app.use(fileUpload());
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Função para converter uma planilha para CSV com delimitador personalizado
